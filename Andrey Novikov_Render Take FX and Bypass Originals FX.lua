@@ -3,7 +3,7 @@
 -- @version 1.2
 -- @about
 --   By Andrey Novikov. Copyright (c) 2026 Andrey Novikov.
---   Render selected items to new takes with their Take FX baked in, then bypass
+--   Render selected items to new takes with Take FX processing applied, then bypass
 --   FX on the original active takes. Mono stays mono; stereo stays stereo.
 --   Track FX states and item selection are restored. No extensions required.
 -- No extensions required. One Undo restores the edit.
@@ -77,7 +77,7 @@ local function validate_render(entry)
     error("Новый тейк не соответствует исходному формату моно/стерео.", 0)
   end
   -- Native Apply FX produces a clean take. Never keep live FX on top of
-  -- the baked audio if a REAPER version happens to copy the chain.
+  -- the rendered audio if a REAPER version happens to copy the chain.
   for index = 0, r.TakeFX_GetCount(take) - 1 do
     r.TakeFX_SetEnabled(take, index, false)
   end
@@ -88,7 +88,7 @@ r.Undo_BeginBlock2(project)
 r.PreventUIRefresh(1)
 local ok, err = xpcall(function()
   -- Apply track/take FX supports explicit mono/stereo output. Exclude track
-  -- processing for both passes so only Take FX are printed into the files.
+  -- processing for both passes so only Take FX processing is rendered to the files.
   for track in pairs(tracks) do
     if not r.SetMediaTrackInfo_Value(track, "I_FXEN", 0) then
       error("Не удалось временно отключить трековую обработку для рендера.", 0)
