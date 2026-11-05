@@ -25,5 +25,15 @@
         <source file="Render Take FX and Bypass Originals FX (Andrey Novikov).lua" main="main">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/587f5f0ca69b714ac8c214f5018ed4379fe84f05/Andrey%20Novikov_Render%20Take%20FX%20and%20Bypass%20Originals%20FX.lua</source>
       </version>
     </reapack>
+    <reapack name="exploit stereo audio (Andrey Novikov).lua" type="script" desc="exploit stereo audio (Andrey Novikov)">
+      <metadata>
+        <description>{\rtf1\ansi Split stereo items to real mono WAV files on shared L/R child tracks. Source tracks become folders. Pair groups, hard panning, copied and bypassed Take FX. REAPER 7.46+.}</description>
+      </metadata>
+      <version name="1.0.0" author="Andrey Novikov" time="2026-11-05T14:00:00Z">
+        <changelog>Initial release. One shared L/R pair per source track; real mono float32 files, folder routing, paired item groups, naming and Undo. Extract raw audio and preserve Take FX on both mono takes in bypass.</changelog>
+        <source file="exploit stereo audio (Andrey Novikov).lua" main="main">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/2d0b7a6e212bd00672a8a310d56391ff5046641e/Andrey%20Novikov_exploit%20stereo%20audio.lua</source>
+        <source file="exploit stereo audio_README_RU.md">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/2d0b7a6e212bd00672a8a310d56391ff5046641e/docs/exploit-stereo-audio_RU.md</source>
+      </version>
+    </reapack>
   </category>
 </index>

@@ -11,10 +11,10 @@ REAPER Lua scripts by **Andrey Novikov**.
    ```text
    https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/main/index.xml
    ```
-2. Open **Extensions → ReaPack → Browse packages**. Search for **Open Melodyne (Andrey Novikov)** or **Render Take FX and Bypass Originals FX (Andrey Novikov)**, mark the desired package for installation, and click **Apply**.
+2. Open **Extensions → ReaPack → Browse packages**. Search for **exploit stereo audio (Andrey Novikov)**, **Open Melodyne (Andrey Novikov)** or **Render Take FX and Bypass Originals FX (Andrey Novikov)**, mark the desired package for installation, and click **Apply**.
 3. For later releases, use **Extensions → ReaPack → Synchronize packages**.
 
-Current versions: **Open Melodyne 1.1.0** (one window per selection) and **Render Take FX 1.2.1**.
+Current versions: **exploit stereo audio 1.0.0**, **Open Melodyne 1.1.0** (one window per selection) and **Render Take FX 1.2.1**.
 
 Scripts installed through ReaPack are registered in the main Action List with **(Andrey Novikov)** in their file names. If migrating from a manually downloaded script, assign the shortcut to the ReaPack action once; subsequent ReaPack updates keep that action and shortcut.
 
@@ -78,6 +78,18 @@ Requires **REAPER 7.06+** and an installed Melodyne plug-in available in the FX 
 Lua syntax and 12 mocked REAPER API scenarios passed: multiple tracks, repeated invocation, existing windows, duplicate instances, take priority, bypass/offline, containers, partial/total insertion failure, empty selection, and FX chain windows. Operation inside REAPER has not yet been verified.
 
 </details>
+
+## 3. exploit stereo audio (Andrey Novikov)
+
+[Download script](Andrey%20Novikov_exploit%20stereo%20audio.lua) · [Detailed Russian guide](docs/exploit-stereo-audio_RU.md)
+
+Splits selected stereo items to independent mono WAV files. With no item selection, processes stereo items on selected tracks. Each source track becomes a folder containing exactly one shared L/R track pair for all its processed items. Named tracks become `Name - L` and `Name - R`; unnamed tracks use `L` and `R`. Children are panned fully left/right with a 0 dB pan law. Each resulting item pair has its own group.
+
+Take FX are excluded from the new audio, copied to both resulting mono takes and bypassed, preserving plug-in settings. Track FX, automation and routing remain on the source folder. Source items are removed only after all extractions succeed; source files on disk remain intact. One Undo restores the project edit. Item grouping is enabled if needed; that global option remains enabled after Undo.
+
+Requires REAPER 7.46+; no extensions. Output: mono WAV 32-bit float at the source sample rate. Processes single-take stereo files in Normal channel mode on tracks without fixed/free lanes; unsupported items stay in place. Add Melodyne to the resulting L/R tracks for independent source analysis. Existing ARA analysis migration has not been verified.
+
+Verified in isolated REAPER 7.84/macOS-arm64: multiple items/tracks, shared L/R, naming, folder nesting, groups, copied/bypassed Take FX parameters, Undo/Redo, format restoration, and early/late render failure rollback. Inspected 22 mono float32 WAV files; six channel comparisons, including active source Take FX, matched the corresponding trimmed raw source samples exactly.
 
 <details>
 <summary>Publishing future updates (maintainers)</summary>
