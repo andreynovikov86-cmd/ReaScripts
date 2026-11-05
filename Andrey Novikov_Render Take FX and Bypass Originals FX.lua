@@ -1,6 +1,7 @@
--- @description Render Take FX and Bypass Originals FX
+-- @description Render Take FX and Bypass Originals FX (Andrey Novikov)
 -- @author Andrey Novikov
--- @version 1.2
+-- @version 1.2.1
+-- @changelog Publish branded ReaPack package; rendering behavior unchanged.
 -- @about
 --   By Andrey Novikov. Copyright (c) 2026 Andrey Novikov.
 --   Render selected items to new takes with Take FX processing applied, then bypass
