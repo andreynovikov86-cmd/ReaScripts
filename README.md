@@ -41,13 +41,15 @@ Lua syntax and mocked REAPER API tests passed for mixed mono/stereo selections, 
 <details>
 <summary>Description and installation</summary>
 
-Opens the floating interface of an active Melodyne instance. If no active instance is found, inserts a new one.
+Ensures an active Melodyne instance exists on every selected target, then opens only one floating Melodyne window for the whole selection.
 
 - Selected items take priority: the action processes their active takes.
 - If no items are selected, it processes selected tracks.
 - Bypassed and offline instances are skipped and left unchanged.
 - Searches inside FX containers, skipping bypassed and offline containers.
-- Processes every selected target and opens the first active Melodyne found on each.
+- Reuses an already open active Melodyne window among the selected targets; otherwise opens the first available instance.
+- Closes other active Melodyne interfaces on the selected targets, including extra instances on the same target. Plug-ins remain loaded and processing.
+- Windows outside the selection are left unchanged.
 
 ### Installation
 
@@ -57,6 +59,6 @@ Requires **REAPER 7.06+** and an installed Melodyne plug-in available in the FX 
 
 ### Validation
 
-Operation inside REAPER has not yet been verified.
+Lua syntax and 12 mocked REAPER API scenarios passed: multiple tracks, repeated invocation, existing windows, duplicate instances, take priority, bypass/offline, containers, partial/total insertion failure, empty selection, and FX chain windows. Operation inside REAPER has not yet been verified.
 
 </details>
