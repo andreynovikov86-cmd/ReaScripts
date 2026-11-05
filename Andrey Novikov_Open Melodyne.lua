@@ -1,3 +1,13 @@
+-- @description Open Melodyne (Andrey Novikov)
+-- @author Andrey Novikov
+-- @version 1.1.0
+-- @changelog
+--   Keep only one Melodyne window open across selected tracks or takes.
+--   Publish as a ReaPack package with author branding.
+-- @about
+--   By Andrey Novikov. REAPER 7.06+ and Melodyne required.
+--   Prepare Melodyne on every selected track or active take, but open one window.
+--   Bypassed and offline instances are skipped.
 -- Open active Melodyne, or insert a new instance.
 -- Prepare every selected target, but show only one Melodyne window.
 -- Selected item takes take priority over selected tracks.
