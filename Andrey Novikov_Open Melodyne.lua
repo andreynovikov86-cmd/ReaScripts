@@ -1,4 +1,5 @@
 -- Open active Melodyne, or insert a new instance.
+-- Prepare every selected target, but show only one Melodyne window.
 -- Selected item takes take priority over selected tracks.
 -- REAPER 7.06+; no extensions required.
 local r = reaper
@@ -15,29 +16,32 @@ else
 end
 
 local function find(t)
+  local matches = {}
   local function scan(fx)
     if not r[t.prefix .. 'GetEnabled'](t.obj, fx)
       or r[t.prefix .. 'GetOffline'](t.obj, fx) then return end
     local ok, name = r[t.prefix .. 'GetNamedConfigParm'](t.obj, fx, 'fx_name')
     if not ok or name == '' then
-      _, name = r[t.prefix .. 'GetFXName'](t.obj, fx, '')
+      local named
+      named, name = r[t.prefix .. 'GetFXName'](t.obj, fx, '')
     end
-    if name:lower():find('melodyne', 1, true) then return fx end
+    if name:lower():find('melodyne', 1, true) then
+      matches[#matches + 1] = {target = t, fx = fx}
+    end
     local has, count = r[t.prefix .. 'GetNamedConfigParm'](t.obj, fx, 'container_count')
     if has then
       for j = 0, (tonumber(count) or 0) - 1 do
         local valid, child = r[t.prefix .. 'GetNamedConfigParm'](t.obj, fx, 'container_item.' .. j)
         if valid and tonumber(child) then
-          local found = scan(tonumber(child))
-          if found then return found end
+          scan(tonumber(child))
         end
       end
     end
   end
   for fx = 0, r[t.prefix .. 'GetCount'](t.obj) - 1 do
-    local found = scan(fx)
-    if found then return found end
+    scan(fx)
   end
+  return matches
 end
 
 if #targets == 0 then
@@ -45,21 +49,51 @@ if #targets == 0 then
   return
 end
 local failures = 0
+local instances = {}
+local window
 r.Undo_BeginBlock()
 for _, t in ipairs(targets) do
-  local fx = find(t)
-  if not fx then
+  local matches = find(t)
+  if #matches == 0 then
+    local fx
     if t.prefix == 'TakeFX_' then
       fx = r.TakeFX_AddByName(t.obj, 'Melodyne', -1)
     else
       fx = r.TrackFX_AddByName(t.obj, 'Melodyne', false, -1)
     end
+    if fx and fx >= 0 then
+      -- Hide any window automatically opened by REAPER on insertion.
+      r[t.prefix .. 'Show'](t.obj, fx, 2)
+      if r[t.prefix .. 'GetChainVisible'](t.obj) == fx then
+        r[t.prefix .. 'Show'](t.obj, fx, 0)
+      end
+      matches[1] = {target = t, fx = fx}
+    else
+      failures = failures + 1
+    end
   end
-  if fx and fx >= 0 then
-    r[t.prefix .. 'Show'](t.obj, fx, 3)
-  else
-    failures = failures + 1
+  for _, instance in ipairs(matches) do
+    instances[#instances + 1] = instance
+    -- Prefer a window the user already has open, before opening a new one.
+    if not window and r[t.prefix .. 'GetOpen'](t.obj, instance.fx) then
+      window = instance
+    end
   end
+end
+window = window or instances[1]
+for _, instance in ipairs(instances) do
+  local t, fx = instance.target, instance.fx
+  if instance ~= window then
+    r[t.prefix .. 'Show'](t.obj, fx, 2)
+  end
+  -- Avoid showing Melodyne in both a chain window and a floating window.
+  if r[t.prefix .. 'GetChainVisible'](t.obj) == fx then
+    r[t.prefix .. 'Show'](t.obj, fx, 0)
+  end
+end
+if window then
+  local t = window.target
+  r[t.prefix .. 'Show'](t.obj, window.fx, 3)
 end
 r.Undo_EndBlock('Open or insert Melodyne', -1)
 if failures > 0 then
