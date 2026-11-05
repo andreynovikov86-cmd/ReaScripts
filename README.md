@@ -4,7 +4,23 @@
 
 REAPER Lua scripts by **Andrey Novikov**.
 
-## 1. Render Take FX and Bypass Originals FX
+<details>
+<summary>Install and update via ReaPack</summary>
+
+1. Open **Extensions → ReaPack → Import repositories** and add:
+   ```text
+   https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/main/index.xml
+   ```
+2. Open **Extensions → ReaPack → Browse packages**. Search for **Open Melodyne (Andrey Novikov)** or **Render Take FX and Bypass Originals FX (Andrey Novikov)**, mark the desired package for installation, and click **Apply**.
+3. For later releases, use **Extensions → ReaPack → Synchronize packages**.
+
+Current versions: **Open Melodyne 1.1.0** (one window per selection) and **Render Take FX 1.2.1**.
+
+Scripts installed through ReaPack are registered in the main Action List with **(Andrey Novikov)** in their file names. If migrating from a manually downloaded script, assign the shortcut to the ReaPack action once; subsequent ReaPack updates keep that action and shortcut.
+
+</details>
+
+## 1. Render Take FX and Bypass Originals FX (Andrey Novikov)
 
 [Download script](Andrey%20Novikov_Render%20Take%20FX%20and%20Bypass%20Originals%20FX.lua)
 
@@ -34,7 +50,7 @@ Lua syntax and mocked REAPER API tests passed for mixed mono/stereo selections, 
 
 </details>
 
-## 2. Open Melodyne
+## 2. Open Melodyne (Andrey Novikov)
 
 [Download script](Andrey%20Novikov_Open%20Melodyne.lua)
 
@@ -60,5 +76,12 @@ Requires **REAPER 7.06+** and an installed Melodyne plug-in available in the FX 
 ### Validation
 
 Lua syntax and 12 mocked REAPER API scenarios passed: multiple tracks, repeated invocation, existing windows, duplicate instances, take priority, bypass/offline, containers, partial/total insertion failure, empty selection, and FX chain windows. Operation inside REAPER has not yet been verified.
+
+</details>
+
+<details>
+<summary>Publishing future updates (maintainers)</summary>
+
+Keep the repository URL, category, package name and installed file name in `index.xml` stable. For every release, increase the script's `@version`, update `@changelog`, and commit the script first. Add a new matching `<version>` to that package in `index.xml`, pointing its source URL to the full source commit SHA. Keep previous versions for rollback. Publish the updated index to `main`; ReaPack synchronization will then offer the new version. Changing only the Lua file does not publish a ReaPack update.
 
 </details>
