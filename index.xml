@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index version="1" name="ReaScripts by Andrey Novikov">
+  <metadata>
+    <description>{\rtf1\ansi REAPER scripts by Andrey Novikov.}</description>
+    <link href="https://github.com/andreynovikov86-cmd/ReaScripts">GitHub</link>
+  </metadata>
+  <category name="FX">
+    <reapack name="Open Melodyne (Andrey Novikov).lua" type="script" desc="Open Melodyne (Andrey Novikov)">
+      <metadata>
+        <description>{\rtf1\ansi Prepare active Melodyne on selected tracks or takes and show one window. REAPER 7.06+ and Melodyne required.}</description>
+      </metadata>
+      <version name="1.1.0" author="Andrey Novikov" time="2026-11-05T13:21:30Z">
+        <changelog>Open one Melodyne window for the whole selection. Reuse an existing window and close extra active Melodyne interfaces on selected targets. Add ReaPack distribution and author branding.</changelog>
+        <source file="Open Melodyne (Andrey Novikov).lua" main="main">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/587f5f0ca69b714ac8c214f5018ed4379fe84f05/Andrey%20Novikov_Open%20Melodyne.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Items">
+    <reapack name="Render Take FX and Bypass Originals FX (Andrey Novikov).lua" type="script" desc="Render Take FX and Bypass Originals FX (Andrey Novikov)">
+      <metadata>
+        <description>{\rtf1\ansi Render selected items with Take FX to new takes, then bypass original Take FX. Preserve track FX states and item selection.}</description>
+      </metadata>
+      <version name="1.2.1" author="Andrey Novikov" time="2026-11-05T13:21:30Z">
+        <changelog>Publish branded ReaPack package. Rendering behavior unchanged from 1.2.</changelog>
+        <source file="Render Take FX and Bypass Originals FX (Andrey Novikov).lua" main="main">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/587f5f0ca69b714ac8c214f5018ed4379fe84f05/Andrey%20Novikov_Render%20Take%20FX%20and%20Bypass%20Originals%20FX.lua</source>
+      </version>
+    </reapack>
+  </category>
+</index>
