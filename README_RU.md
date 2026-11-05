@@ -4,7 +4,23 @@
 
 Lua-скрипты для REAPER. Автор: **Andrey Novikov (Андрей Новиков)**.
 
-## 1. Render Take FX and Bypass Originals FX — рендер Take FX
+<details>
+<summary>Установка и обновление через ReaPack</summary>
+
+1. Откройте **Extensions → ReaPack → Import repositories** и добавьте:
+   ```text
+   https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/main/index.xml
+   ```
+2. Откройте **Extensions → ReaPack → Browse packages**. Найдите **Open Melodyne (Andrey Novikov)** или **Render Take FX and Bypass Originals FX (Andrey Novikov)**, отметьте нужный пакет для установки и нажмите **Apply**.
+3. В дальнейшем обновляйте через **Extensions → ReaPack → Synchronize packages**.
+
+Текущие версии: **Open Melodyne 1.1.0** (одно окно на всё выделение) и **Render Take FX 1.2.1**.
+
+Установленные через ReaPack скрипты появляются в основном списке Actions с **(Andrey Novikov)** в имени файла. При переходе с вручную скачанного скрипта один раз назначьте горячую клавишу действию из ReaPack. Последующие обновления сохраняют это действие и клавишу.
+
+</details>
+
+## 1. Render Take FX and Bypass Originals FX (Andrey Novikov) — рендер Take FX
 
 [Скачать скрипт](Andrey%20Novikov_Render%20Take%20FX%20and%20Bypass%20Originals%20FX.lua)
 
@@ -26,7 +42,7 @@ Lua-скрипты для REAPER. Автор: **Andrey Novikov (Андрей Н�
 
 </details>
 
-## 2. Open Melodyne — открыть Melodyne
+## 2. Open Melodyne (Andrey Novikov) — открыть Melodyne
 
 [Скачать скрипт](Andrey%20Novikov_Open%20Melodyne.lua)
 
@@ -52,5 +68,12 @@ Lua-скрипты для REAPER. Автор: **Andrey Novikov (Андрей Н�
 ### Проверка
 
 Проверены синтаксис Lua и 12 сценариев на имитации REAPER API: несколько треков, повторный запуск, уже открытые окна, несколько экземпляров, приоритет тейков, байпас/оффлайн, контейнеры, частичная и полная ошибка добавления, пустое выделение и окна FX-цепочек. Работа в самом REAPER пока не проверена.
+
+</details>
+
+<details>
+<summary>Публикация следующих обновлений (для автора)</summary>
+
+Сохраняйте URL репозитория, категорию, имя пакета и установленного файла в `index.xml`. Для каждого выпуска повышайте `@version` скрипта, обновляйте `@changelog` и сначала публикуйте коммит со скриптом. Затем добавляйте в `index.xml` новую запись `<version>` этого пакета со ссылкой на полный SHA коммита исходника. Старые версии сохраняйте для отката. После публикации обновлённого индекса в `main` ReaPack предложит новую версию при синхронизации. Изменения только Lua-файла для выпуска обновления недостаточно.
 
 </details>
