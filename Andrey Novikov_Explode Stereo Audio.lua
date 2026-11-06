@@ -1,8 +1,8 @@
--- @description exploit stereo audio (Andrey Novikov)
+-- @description Explode Stereo Audio (Andrey Novikov)
 -- @author Andrey Novikov
--- @version 1.0.0
+-- @version 1.0.1
 -- @changelog
---   Initial release: real mono L/R files, shared child tracks, folder routing and paired item groups.
+--   Correct the action name to Explode Stereo Audio and capitalize its title.
 -- @license MIT
 -- @about
 --   Split selected stereo items to real mono files on shared L/R child tracks.
@@ -18,9 +18,9 @@
 
 local r = reaper
 local PROJECT = r.EnumProjects(-1, '')
-local TITLE = 'exploit stereo audio — Andrey Novikov'
+local TITLE = 'Explode Stereo Audio — Andrey Novikov'
 local EXPLODE = 40894
-local UNDO_NAME = 'exploit stereo audio (Andrey Novikov)'
+local UNDO_NAME = 'Explode Stereo Audio (Andrey Novikov)'
 
 if (tonumber(r.GetAppVersion():match('^[%d.]+')) or 0) < 7.46 then
   r.MB('Для этого скрипта требуется REAPER 7.46 или новее.', TITLE, 0)
@@ -184,7 +184,7 @@ local ok, err = xpcall(function()
     for _, original in ipairs(batch.items) do
       -- Native extraction on a scratch clone keeps originals intact until all renders pass.
       local scratchIndex = r.CountTracks(PROJECT)
-      local scratch = insertTrack(scratchIndex, '__exploit stereo audio temporary__')
+      local scratch = insertTrack(scratchIndex, '__Explode Stereo Audio temporary__')
       r.SetMediaTrackInfo_Value(scratch, 'B_MAINSEND', 0)
       local clone = cloneTo(original, scratch)
       deselectItems()
