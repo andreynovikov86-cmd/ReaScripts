@@ -11,10 +11,10 @@ REAPER Lua scripts by **Andrey Novikov**.
    ```text
    https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/main/index.xml
    ```
-2. Open **Extensions → ReaPack → Browse packages**. Search for **exploit stereo audio (Andrey Novikov)**, **Open Melodyne (Andrey Novikov)** or **Render Take FX and Bypass Originals FX (Andrey Novikov)**, mark the desired package for installation, and click **Apply**.
+2. Open **Extensions → ReaPack → Browse packages**. Search for **Explode Stereo Audio (Andrey Novikov)**, **Open Melodyne (Andrey Novikov)** or **Render Take FX and Bypass Originals FX (Andrey Novikov)**, mark the desired package for installation, and click **Apply**.
 3. For later releases, use **Extensions → ReaPack → Synchronize packages**.
 
-Current versions: **exploit stereo audio 1.0.0**, **Open Melodyne 1.1.0** (one window per selection) and **Render Take FX 1.2.1**.
+Current versions: **Explode Stereo Audio 1.0.1**, **Open Melodyne 1.1.0** (one window per selection) and **Render Take FX 1.2.1**.
 
 Scripts installed through ReaPack are registered in the main Action List with **(Andrey Novikov)** in their file names. If migrating from a manually downloaded script, assign the shortcut to the ReaPack action once; subsequent ReaPack updates keep that action and shortcut.
 
@@ -79,9 +79,12 @@ Lua syntax and 12 mocked REAPER API scenarios passed: multiple tracks, repeated 
 
 </details>
 
-## 3. exploit stereo audio (Andrey Novikov)
+## 3. Explode Stereo Audio (Andrey Novikov)
 
-[Download script](Andrey%20Novikov_exploit%20stereo%20audio.lua) · [Detailed Russian guide](docs/exploit-stereo-audio_RU.md)
+[Download script](Andrey%20Novikov_Explode%20Stereo%20Audio.lua)
+
+<details>
+<summary>Description and installation</summary>
 
 Splits selected stereo items to independent mono WAV files. With no item selection, processes stereo items on selected tracks. Each source track becomes a folder containing exactly one shared L/R track pair for all its processed items. Named tracks become `Name - L` and `Name - R`; unnamed tracks use `L` and `R`. Children are panned fully left/right with a 0 dB pan law. Each resulting item pair has its own group.
 
@@ -90,6 +93,18 @@ Take FX are excluded from the new audio, copied to both resulting mono takes and
 Requires REAPER 7.46+; no extensions. Output: mono WAV 32-bit float at the source sample rate. Processes single-take stereo files in Normal channel mode on tracks without fixed/free lanes; unsupported items stay in place. Add Melodyne to the resulting L/R tracks for independent source analysis. Existing ARA analysis migration has not been verified.
 
 Verified in isolated REAPER 7.84/macOS-arm64: multiple items/tracks, shared L/R, naming, folder nesting, groups, copied/bypassed Take FX parameters, Undo/Redo, format restoration, and early/late render failure rollback. Inspected 22 mono float32 WAV files; six channel comparisons, including active source Take FX, matched the corresponding trimmed raw source samples exactly.
+
+### Installation
+
+Use **Extensions → ReaPack → Synchronize packages** to update. For a first installation, find **Explode Stereo Audio (Andrey Novikov)** in **Browse packages**, mark it for installation and click **Apply**.
+
+For manual installation, download the Lua file and use **Actions → Show action list → New action → Load ReaScript**.
+
+Version 1.0.1 corrects the name and capitalization. After updating, an existing shortcut may need to be assigned once to the renamed action.
+
+[Guide](docs/explode-stereo-audio.md)
+
+</details>
 
 <details>
 <summary>Publishing future updates (maintainers)</summary>

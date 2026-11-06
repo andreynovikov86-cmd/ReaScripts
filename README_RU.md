@@ -11,10 +11,10 @@ Lua-скрипты для REAPER. Автор: **Andrey Novikov (Андрей Н�
    ```text
    https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/main/index.xml
    ```
-2. Откройте **Extensions → ReaPack → Browse packages**. Найдите **exploit stereo audio (Andrey Novikov)**, **Open Melodyne (Andrey Novikov)** или **Render Take FX and Bypass Originals FX (Andrey Novikov)**, отметьте нужный пакет для установки и нажмите **Apply**.
+2. Откройте **Extensions → ReaPack → Browse packages**. Найдите **Explode Stereo Audio (Andrey Novikov)**, **Open Melodyne (Andrey Novikov)** или **Render Take FX and Bypass Originals FX (Andrey Novikov)**, отметьте нужный пакет для установки и нажмите **Apply**.
 3. В дальнейшем обновляйте через **Extensions → ReaPack → Synchronize packages**.
 
-Текущие версии: **exploit stereo audio 1.0.0**, **Open Melodyne 1.1.0** (одно окно на всё выделение) и **Render Take FX 1.2.1**.
+Текущие версии: **Explode Stereo Audio 1.0.1**, **Open Melodyne 1.1.0** (одно окно на всё выделение) и **Render Take FX 1.2.1**.
 
 Установленные через ReaPack скрипты появляются в основном списке Actions с **(Andrey Novikov)** в имени файла. При переходе с вручную скачанного скрипта один раз назначьте горячую клавишу действию из ReaPack. Последующие обновления сохраняют это действие и клавишу.
 
@@ -71,9 +71,12 @@ Lua-скрипты для REAPER. Автор: **Andrey Novikov (Андрей Н�
 
 </details>
 
-## 3. exploit stereo audio (Andrey Novikov) — стерео в два моно
+## 3. Explode Stereo Audio (Andrey Novikov) — стерео в два моно
 
-[Скачать скрипт](Andrey%20Novikov_exploit%20stereo%20audio.lua) · [Подробная инструкция](docs/exploit-stereo-audio_RU.md)
+[Скачать скрипт](Andrey%20Novikov_Explode%20Stereo%20Audio.lua)
+
+<details>
+<summary>Описание и установка</summary>
 
 Создаёт отдельные физические монофайлы L и R. Исходная дорожка становится папкой с одной общей парой дочерних дорожек для всех её обрабатываемых айтемов. Названия: `Название - L` и `Название - R`; при пустом имени — просто `L` и `R`. Панорама — 100% L/R, закон панорамирования дочерних дорожек — 0 dB. Каждая пара айтемов получает собственную группу.
 
@@ -82,6 +85,18 @@ Lua-скрипты для REAPER. Автор: **Andrey Novikov (Андрей Н�
 REAPER 7.46+, расширения не нужны. Результат — моно WAV 32-bit float с частотой исходника. Нужны файловые стереоисточники, один тейк, Normal channel mode, дорожки без fixed/free lanes. Неподходящие айтемы остаются на месте. Для раздельного анализа добавляйте Melodyne на дочерние L/R; перенос прежнего ARA-анализа отдельно не проверялся.
 
 Проверено в отдельном REAPER 7.84/macOS-arm64: несколько файлов/треков, общие L/R, названия, папки, группы, перенос Take FX в байпасе и сохранение параметров, Undo/Redo, восстановление формата и откат при ранней/поздней ошибке. Проверены 22 моно WAV 32-bit float; шесть поканальных сравнений с исходником, включая айтемы с активными Take FX, дали нулевую погрешность.
+
+### Установка
+
+Обновление: **Extensions → ReaPack → Synchronize packages**. Для первой установки найдите **Explode Stereo Audio (Andrey Novikov)** в **Browse packages**, отметьте пакет для установки и нажмите **Apply**.
+
+Ручная установка: скачайте Lua-файл и выберите его через **Actions → Show action list → New action → Load ReaScript**.
+
+Версия 1.0.1 исправляет название и регистр букв. После обновления ранее назначенную клавишу может потребоваться один раз переназначить новому имени действия.
+
+[Инструкция](docs/explode-stereo-audio_RU.md)
+
+</details>
 
 <details>
 <summary>Публикация следующих обновлений (для автора)</summary>
