@@ -42,4 +42,20 @@
       </version>
     </reapack>
   </category>
+  <category name="Tracks">
+    <reapack name="Import Tracks From Project RPP (Andrey Novikov).lua" type="script" desc="Import Tracks From Project RPP (Andrey Novikov)">
+      <metadata>
+        <description>{\rtf1\ansi Import selected tracks from a saved RPP with dependencies, routing, optional media copying and a bilingual browser. REAPER 7.85+, ReaImGui 0.10+. Dragging also requires js_ReaScriptAPI.}</description>
+      </metadata>
+      <version name="0.2.24" author="Andrey Novikov" time="2026-11-11T00:50:20Z">
+        <changelog>Initial public release. RU/EN track browser, search, dependency selection, drag insertion, media copying with progress, source history and rounded themed notices.</changelog>
+        <source file="Import Tracks From Project RPP (Andrey Novikov).lua" main="main">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/5b6bdecd8259087639792b37cd3601d0a609fb58/Andrey%20Novikov_Import%20Tracks%20From%20Project%20RPP.lua</source>
+        <source file="docs/import-tracks-from-project.md">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/5b6bdecd8259087639792b37cd3601d0a609fb58/docs/import-tracks-from-project.md</source>
+        <source file="docs/import-tracks-from-project_RU.md">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/5b6bdecd8259087639792b37cd3601d0a609fb58/docs/import-tracks-from-project_RU.md</source>
+        <source file="docs/images/import-tracks-en.png">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/5b6bdecd8259087639792b37cd3601d0a609fb58/docs/images/import-tracks-en.png</source>
+        <source file="docs/images/import-tracks-ru.png">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/5b6bdecd8259087639792b37cd3601d0a609fb58/docs/images/import-tracks-ru.png</source>
+        <source file="docs/images/import-tracks-progress.png">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/5b6bdecd8259087639792b37cd3601d0a609fb58/docs/images/import-tracks-progress.png</source>
+      </version>
+    </reapack>
+  </category>
 </index>
