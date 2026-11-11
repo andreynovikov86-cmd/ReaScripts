@@ -11,10 +11,10 @@ Lua-скрипты для REAPER. Автор: **Andrey Novikov (Андрей Н�
    ```text
    https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/main/index.xml
    ```
-2. Откройте **Extensions → ReaPack → Browse packages**. Найдите **Explode Stereo Audio (Andrey Novikov)**, **Open Melodyne (Andrey Novikov)** или **Render Take FX and Bypass Originals FX (Andrey Novikov)**, отметьте нужный пакет для установки и нажмите **Apply**.
+2. Откройте **Extensions → ReaPack → Browse packages**. Найдите **Explode Stereo Audio (Andrey Novikov)**, **Open Melodyne (Andrey Novikov)**, **Render Take FX and Bypass Originals FX (Andrey Novikov)** или **Import Tracks From Project RPP (Andrey Novikov)**, отметьте нужный пакет для установки и нажмите **Apply**.
 3. В дальнейшем обновляйте через **Extensions → ReaPack → Synchronize packages**.
 
-Текущие версии: **Explode Stereo Audio 1.0.1**, **Open Melodyne 1.1.0** (одно окно на всё выделение) и **Render Take FX 1.2.1**.
+Текущие версии: **Explode Stereo Audio 1.0.1**, **Open Melodyne 1.1.0** (одно окно на всё выделение), **Render Take FX 1.2.1** и **Import Tracks From Project RPP 0.2.24**.
 
 Установленные через ReaPack скрипты появляются в основном списке Actions с **(Andrey Novikov)** в имени файла. При переходе с вручную скачанного скрипта один раз назначьте горячую клавишу действию из ReaPack. Последующие обновления сохраняют это действие и клавишу.
 
@@ -95,6 +95,27 @@ REAPER 7.46+, расширения не нужны. Результат — мо�
 Версия 1.0.1 исправляет название и регистр букв. После обновления ранее назначенную клавишу может потребоваться один раз переназначить новому имени действия.
 
 [Инструкция](docs/explode-stereo-audio_RU.md)
+
+</details>
+
+## 4. Import Tracks From Project RPP (Andrey Novikov) — импорт дорожек
+
+[Скачать скрипт](Andrey%20Novikov_Import%20Tracks%20From%20Project%20RPP.lua)
+
+<details>
+<summary>Описание, установка и проверка</summary>
+
+Импорт выбранных дорожек из сохранённого `.RPP` без открытия исходного проекта. Дерево папок, поиск, ручное исключение зависимостей, автоматический выбор родителей и прямых посылов. Импортируются айтемы, FX, настройки, огибающие и связи между включёнными дорожками.
+
+Можно добавить отмеченный набор кнопкой или перетащить его в нужное место аранжировки. Жёлтая линия показывает границу вставки. Доступны копирование медиа с прогрессом, дополнительная общая папка и необязательная замена карты темпа. Интерфейс RU/EN, закрытие Esc, память исходного файла отдельно для каждого текущего проекта.
+
+Требуются **REAPER 7.85+** и **ReaImGui 0.10+**. Для перетаскивания дополнительно нужен **js_ReaScriptAPI**. Группировка параметров/VCA и аппаратные выходы не импортируются. Undo отменяет изменения проекта; скопированные файлы остаются на диске.
+
+Установка: синхронизируйте ReaPack, найдите **Import Tracks From Project RPP (Andrey Novikov)** в **Browse packages** и нажмите **Apply**. Вручную: загрузите скачанный Lua-файл через **Actions → Show action list → New action → Load ReaScript**.
+
+Проверены в REAPER 7.85/macOS-arm64 вставка, папки, полосы автоматизации, копирование и Undo; отдельно — поиск, клавиатура, уведомления и память источников. Полный жест мышью и другие платформы проверены не полностью.
+
+[Руководство и скриншоты](docs/import-tracks-from-project_RU.md)
 
 </details>
 
