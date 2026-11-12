@@ -2,9 +2,13 @@
 
 [English](import-tracks-from-project.md) | [Русский](import-tracks-from-project_RU.md)
 
-Author: **Andrey Novikov**. Version **0.2.24**. Requires **REAPER 7.85+** and **ReaImGui 0.10+**. Dragging into the arrange view also requires **js_ReaScriptAPI**.
+Author: **Andrey Novikov**. Version **0.2.26**. Requires **REAPER 7.85+** and **ReaImGui 0.10+**. Dragging into the arrange view also requires **js_ReaScriptAPI**.
 
 Import selected tracks from another saved REAPER project without opening it in a project tab or modifying its file. Browse its track tree, search by name, choose the tracks and import their items, FX, settings and routing between included tracks.
+
+![Import Tracks From Project RPP](images/import-tracks-preview.png)
+
+![Import tracks demonstration](images/import-tracks-demo.gif)
 
 ![English interface](images/import-tracks-en.png)
 
@@ -13,13 +17,13 @@ Import selected tracks from another saved REAPER project without opening it in a
 1. Run **Import Tracks From Project RPP (Andrey Novikov)** and choose the source `.RPP`.
 2. Check the tracks you need. Selecting a folder includes its subtree. Automatic selection can also include parent folders and direct send destinations; individual dependencies can be excluded manually.
 3. Click **Import selected tracks** to add new tracks at the end of the current project. Alternatively, drag a row into REAPER's arrange view or track panel. The yellow line indicates the insertion boundary.
-4. Dragging a checked row carries the current checked set. Dragging an unchecked row carries that track and its enabled dependencies.
+4. Dragging a checked row carries the current checked set. Dragging an unchecked row starts a fresh selection: that track plus send destinations and parent folders enabled in the import settings. Earlier manual exclusions are ignored for this drag. The visible checked set is preserved.
 
 A drop always creates new tracks; it does not merge the source into an existing track. Without `js_ReaScriptAPI`, selection and the Import button still work.
 
 The first file selection starts in the current project's folder. Each saved destination project remembers its own last source `.RPP`. An unsaved destination uses the last source folder. Use **RU/EN** in the header to switch languages; the choice is remembered.
 
-The search field includes a clear button that appears only when text is present. Clicking a search result's name reveals the same track in the full tree. **Esc** closes the browser; during a drag, Esc cancels that drag. An assigned action shortcut can also toggle the window, with text editing taking priority while the search field is active.
+The search field has a clear button on its left, inside the field. It is gray and disabled when the field is empty and becomes active when text is present. Clicking a search result's name reveals the same track in the full tree. **Esc** closes the browser; during a drag, Esc cancels that drag. An assigned action shortcut can also toggle the window, with text editing taking priority while the search field is active.
 
 ## Import options
 
