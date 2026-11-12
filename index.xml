@@ -56,6 +56,17 @@
         <source file="docs/images/import-tracks-ru.png">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/5b6bdecd8259087639792b37cd3601d0a609fb58/docs/images/import-tracks-ru.png</source>
         <source file="docs/images/import-tracks-progress.png">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/5b6bdecd8259087639792b37cd3601d0a609fb58/docs/images/import-tracks-progress.png</source>
       </version>
+      <version name="0.2.26" author="Andrey Novikov" time="2026-11-12T04:38:13Z">
+        <changelog>Start unchecked-row drags fresh using enabled send and parent options, while checked-row drags preserve the selected set and manual exclusions. Move the search clear button inside the left edge; keep it gray and disabled when empty. Add a trimmed demonstration GIF and illustrated feature cover to both guides.</changelog>
+        <source file="Import Tracks From Project RPP (Andrey Novikov).lua" main="main">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/bfaa72bce0f1b7c44520c1bf428b5b09cc74b33a/Andrey%20Novikov_Import%20Tracks%20From%20Project%20RPP.lua</source>
+        <source file="docs/import-tracks-from-project.md">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/bfaa72bce0f1b7c44520c1bf428b5b09cc74b33a/docs/import-tracks-from-project.md</source>
+        <source file="docs/import-tracks-from-project_RU.md">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/bfaa72bce0f1b7c44520c1bf428b5b09cc74b33a/docs/import-tracks-from-project_RU.md</source>
+        <source file="docs/images/import-tracks-en.png">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/bfaa72bce0f1b7c44520c1bf428b5b09cc74b33a/docs/images/import-tracks-en.png</source>
+        <source file="docs/images/import-tracks-ru.png">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/bfaa72bce0f1b7c44520c1bf428b5b09cc74b33a/docs/images/import-tracks-ru.png</source>
+        <source file="docs/images/import-tracks-progress.png">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/bfaa72bce0f1b7c44520c1bf428b5b09cc74b33a/docs/images/import-tracks-progress.png</source>
+        <source file="docs/images/import-tracks-demo.gif">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/bfaa72bce0f1b7c44520c1bf428b5b09cc74b33a/docs/images/import-tracks-demo.gif</source>
+        <source file="docs/images/import-tracks-preview.png">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/bfaa72bce0f1b7c44520c1bf428b5b09cc74b33a/docs/images/import-tracks-preview.png</source>
+      </version>
     </reapack>
   </category>
 </index>
