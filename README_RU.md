@@ -14,7 +14,7 @@ Lua-скрипты для REAPER. Автор: **Andrey Novikov (Андрей Н�
 2. Откройте **Extensions → ReaPack → Browse packages**. Найдите **Explode Stereo Audio (Andrey Novikov)**, **Open Melodyne (Andrey Novikov)**, **Render Take FX and Bypass Originals FX (Andrey Novikov)** или **Import Tracks From Project RPP (Andrey Novikov)**, отметьте нужный пакет для установки и нажмите **Apply**.
 3. В дальнейшем обновляйте через **Extensions → ReaPack → Synchronize packages**.
 
-Текущие версии: **Explode Stereo Audio 1.0.1**, **Open Melodyne 1.1.0** (одно окно на всё выделение), **Render Take FX 1.2.1** и **Import Tracks From Project RPP 0.2.24**.
+Текущие версии: **Explode Stereo Audio 1.0.1**, **Open Melodyne 1.1.0** (одно окно на всё выделение), **Render Take FX 1.2.1** и **Import Tracks From Project RPP 0.2.26**.
 
 Установленные через ReaPack скрипты появляются в основном списке Actions с **(Andrey Novikov)** в имени файла. При переходе с вручную скачанного скрипта один раз назначьте горячую клавишу действию из ReaPack. Последующие обновления сохраняют это действие и клавишу.
 
@@ -102,6 +102,8 @@ REAPER 7.46+, расширения не нужны. Результат — мо�
 
 [Скачать скрипт](Andrey%20Novikov_Import%20Tracks%20From%20Project%20RPP.lua)
 
+![Import Tracks From Project RPP](docs/images/import-tracks-preview.png)
+
 <details>
 <summary>Описание, установка и проверка</summary>
 
@@ -114,6 +116,8 @@ REAPER 7.46+, расширения не нужны. Результат — мо�
 Установка: синхронизируйте ReaPack, найдите **Import Tracks From Project RPP (Andrey Novikov)** в **Browse packages** и нажмите **Apply**. Вручную: загрузите скачанный Lua-файл через **Actions → Show action list → New action → Load ReaScript**.
 
 Проверены в REAPER 7.85/macOS-arm64 вставка, папки, полосы автоматизации, копирование и Undo; отдельно — поиск, клавиатура, уведомления и память источников. Полный жест мышью и другие платформы проверены не полностью.
+
+![Демонстрация импорта дорожек](docs/images/import-tracks-demo.gif)
 
 [Руководство и скриншоты](docs/import-tracks-from-project_RU.md)
 

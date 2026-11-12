@@ -1,7 +1,7 @@
 -- @description Import Tracks From Project RPP
--- @version 0.2.24
+-- @version 0.2.26
 -- @link https://github.com/andreynovikov86-cmd/ReaScripts
--- @changelog Initial public release: bilingual browser, track dependencies, drag insertion, media copying and progress.
+-- @changelog Move search clear control to the left inside the field; show it disabled when empty. Unchecked drag starts fresh using import options.
 -- @author Andrey Novikov
 -- @about
 --   Source .RPP is read, not opened and not modified.
@@ -1059,8 +1059,9 @@ end
 
 -- Snapshot the import set when dragging begins. An already-checked row
 -- carries the current checked set; an unchecked row carries just itself
--- plus direct sends and parents enabled in the settings. The latter must
--- not permanently check boxes or erase manual exclusions.
+-- plus direct sends and parents enabled in the settings. An unchecked row
+-- starts a fresh selection, without exclusions from an earlier checked set.
+-- Restore the visible checked set after calculating this temporary payload.
 local function drag_selection(src, anchor)
   local chosen = {}
   if src.tracks[anchor].selected then
@@ -1072,7 +1073,7 @@ local function drag_selection(src, anchor)
   local previous = {}
   for i, tr in ipairs(src.tracks) do
     previous[i] = tr.manual
-    if tr.manual ~= false then tr.manual = nil end
+    tr.manual = nil
   end
   src.tracks[anchor].manual = true
   recompute_selection(src, opts)
@@ -2055,6 +2056,30 @@ local function draw_track_browser()
   local shown = ImGui.BeginChild(ctx,'##search_field',width,height,0,
     ImGui.WindowFlags_NoScrollbar | ImGui.WindowFlags_NoScrollWithMouse)
   if shown then
+    -- Keep the clear control at the left edge, inside the shared rounded field.
+    -- Reserve its width even when empty so the text never shifts while typing.
+    local can_clear = search ~= ''
+    local x,y = ImGui.GetCursorScreenPos(ctx)
+    ImGui.BeginDisabled(ctx, not can_clear)
+    local cleared = ImGui.InvisibleButton(ctx,'##clear_search',clear_width,height)
+    local hovered = can_clear and ImGui.IsItemHovered(ctx)
+    ImGui.EndDisabled(ctx)
+    local cx,cy = x+clear_width/2, y+height/2
+    local dl = ImGui.GetWindowDrawList(ctx)
+    if hovered then
+      ImGui.DrawList_AddCircleFilled(dl,cx,cy,height*0.33,0x505050FF,16)
+      ImGui.SetTooltip(ctx,T('Очистить поиск'))
+    end
+    local d = math.min(3.5,height*0.19)
+    local color = can_clear and 0xCFCFCFFF or 0x777777FF
+    dl_line(dl,cx-d,cy-d,cx+d,cy+d,color,1.4)
+    dl_line(dl,cx-d,cy+d,cx+d,cy-d,color,1.4)
+    if can_clear and cleared then
+      search = ''
+      search_focus_pending = true
+      focus_reveal.index, focus_reveal.scroll_pending, focus_reveal.since = nil, false, nil
+    end
+    ImGui.SameLine(ctx,0,0)
     ImGui.SetNextItemWidth(ctx, width-clear_width)
     if search_focus_pending then
       ImGui.SetKeyboardFocusHere(ctx)
@@ -2067,26 +2092,6 @@ local function draw_track_browser()
       focus_reveal.index, focus_reveal.scroll_pending, focus_reveal.since = nil, false, nil
     end
     search = value
-    if search ~= '' then
-      ImGui.SameLine(ctx,0,0)
-      local x,y = ImGui.GetCursorScreenPos(ctx)
-      local cleared = ImGui.InvisibleButton(ctx,'##clear_search',clear_width,height)
-      local hovered = ImGui.IsItemHovered(ctx)
-      local cx,cy = x+clear_width/2, y+height/2
-      local dl = ImGui.GetWindowDrawList(ctx)
-      if hovered then
-        ImGui.DrawList_AddCircleFilled(dl,cx,cy,height*0.33,0x505050FF,16)
-        ImGui.SetTooltip(ctx,T('Очистить поиск'))
-      end
-      local d = math.min(3.5,height*0.19)
-      dl_line(dl,cx-d,cy-d,cx+d,cy+d,0xCFCFCFFF,1.4)
-      dl_line(dl,cx-d,cy+d,cx+d,cy-d,0xCFCFCFFF,1.4)
-      if cleared then
-        search = ''
-        search_focus_pending = true
-        focus_reveal.index, focus_reveal.scroll_pending, focus_reveal.since = nil, false, nil
-      end
-    end
   end
   ImGui.EndChild(ctx)
   ImGui.PopStyleVar(ctx)
@@ -2178,7 +2183,7 @@ end
 local function draw()
   ImGui.SetNextWindowDockID(ctx, -2, ImGui.Cond_FirstUseEver)
   ImGui.SetNextWindowSize(ctx, 900, 790, ImGui.Cond_FirstUseEver)
-  local visible, open = ImGui.Begin(ctx, (T('Импорт дорожек')..'  |  v0.2.24###RPPTrackImport'), true, ImGui.WindowFlags_NoCollapse)
+    local visible, open = ImGui.Begin(ctx, (T('Импорт дорожек')..'  |  v0.2.26###RPPTrackImport'), true, ImGui.WindowFlags_NoCollapse)
   if visible then
     ImGui.BeginDisabled(ctx, import_job ~= nil)
     local available_h = select(2, ImGui.GetContentRegionAvail(ctx))

@@ -14,7 +14,7 @@ REAPER Lua scripts by **Andrey Novikov**.
 2. Open **Extensions → ReaPack → Browse packages**. Search for **Explode Stereo Audio (Andrey Novikov)**, **Open Melodyne (Andrey Novikov)**, **Render Take FX and Bypass Originals FX (Andrey Novikov)** or **Import Tracks From Project RPP (Andrey Novikov)**, mark the desired package for installation, and click **Apply**.
 3. For later releases, use **Extensions → ReaPack → Synchronize packages**.
 
-Current versions: **Explode Stereo Audio 1.0.1**, **Open Melodyne 1.1.0** (one window per selection), **Render Take FX 1.2.1** and **Import Tracks From Project RPP 0.2.24**.
+Current versions: **Explode Stereo Audio 1.0.1**, **Open Melodyne 1.1.0** (one window per selection), **Render Take FX 1.2.1** and **Import Tracks From Project RPP 0.2.26**.
 
 Scripts installed through ReaPack are registered in the main Action List with **(Andrey Novikov)** in their file names. If migrating from a manually downloaded script, assign the shortcut to the ReaPack action once; subsequent ReaPack updates keep that action and shortcut.
 
@@ -110,6 +110,8 @@ Version 1.0.1 corrects the name and capitalization. After updating, an existing 
 
 [Download script](Andrey%20Novikov_Import%20Tracks%20From%20Project%20RPP.lua)
 
+![Import Tracks From Project RPP](docs/images/import-tracks-preview.png)
+
 <details>
 <summary>Description, installation and validation</summary>
 
@@ -122,6 +124,8 @@ Requires **REAPER 7.85+** and **ReaImGui 0.10+**. Dragging also requires **js_Re
 Installation: synchronize ReaPack, find **Import Tracks From Project RPP (Andrey Novikov)** in **Browse packages**, and click **Apply**. Manual installation: load the downloaded Lua file through **Actions → Show action list → New action → Load ReaScript**.
 
 Verified in REAPER 7.85/macOS-arm64: insertion, folders, automation lanes, copying and Undo; isolated checks cover search, keyboard, notices and source history. The full mouse gesture and other platforms have not been fully verified.
+
+![Import tracks demonstration](docs/images/import-tracks-demo.gif)
 
 [Guide and screenshots](docs/import-tracks-from-project.md)
 
