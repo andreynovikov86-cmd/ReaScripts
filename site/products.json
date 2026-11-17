@@ -1,0 +1,203 @@
+[
+  {
+    "id": "render-take-fx",
+    "name": "Render Take FX",
+    "full": "Render Take FX and Bypass Originals FX",
+    "category": "Audio",
+    "version": "1.2.1",
+    "source": "Andrey Novikov_Render Take FX and Bypass Originals FX.lua",
+    "doc": "docs/render-take-fx.md",
+    "ruDoc": "docs/render-take-fx_RU.md",
+    "tag": "Render · Bypass",
+    "summary": "Render Take FX to a new take and bypass the originals.",
+    "ru": "Рендер обработки в новый тейк с отключением исходных Take FX.",
+    "features": [
+      "Original takes and plug-ins remain available.",
+      "Mono and stereo output follow the source take.",
+      "Track FX states and item selection are restored.",
+      "One Undo step. No extensions required."
+    ],
+    "ruFeatures": [
+      "Исходные тейки и плагины остаются доступны.",
+      "Моно и стерео сохраняют формат исходного тейка.",
+      "Состояния трековых FX и выделение восстанавливаются.",
+      "Один шаг Undo. Расширения не нужны."
+    ],
+    "kind": "scripts",
+    "cover": "docs/cards/render-take-fx.svg",
+    "download": "https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/main/Andrey%20Novikov_Render%20Take%20FX%20and%20Bypass%20Originals%20FX.lua",
+    "repository": "https://github.com/andreynovikov86-cmd/ReaScripts",
+    "guide": "https://github.com/andreynovikov86-cmd/ReaScripts/blob/main/docs/render-take-fx.md",
+    "ruGuide": "https://github.com/andreynovikov86-cmd/ReaScripts/blob/main/docs/render-take-fx_RU.md"
+  },
+  {
+    "id": "open-melodyne",
+    "name": "Open Melodyne",
+    "full": "Open Melodyne",
+    "category": "FX",
+    "version": "1.1.0",
+    "source": "Andrey Novikov_Open Melodyne.lua",
+    "doc": "docs/open-melodyne.md",
+    "ruDoc": "docs/open-melodyne_RU.md",
+    "tag": "Many tracks · One window",
+    "summary": "Prepare Melodyne for a selection and open one window.",
+    "ru": "Подготовка Melodyne на выделении с одним открытым окном.",
+    "features": [
+      "Selected takes take priority over tracks.",
+      "Reuse an existing active Melodyne instance.",
+      "Skip bypassed and offline instances.",
+      "REAPER 7.06+ and Melodyne required."
+    ],
+    "ruFeatures": [
+      "Выделенные тейки имеют приоритет над треками.",
+      "Используется уже существующий активный Melodyne.",
+      "Отключённые и офлайн-экземпляры пропускаются.",
+      "Нужны REAPER 7.06+ и Melodyne."
+    ],
+    "kind": "scripts",
+    "cover": "docs/cards/open-melodyne.svg",
+    "download": "https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/main/Andrey%20Novikov_Open%20Melodyne.lua",
+    "repository": "https://github.com/andreynovikov86-cmd/ReaScripts",
+    "guide": "https://github.com/andreynovikov86-cmd/ReaScripts/blob/main/docs/open-melodyne.md",
+    "ruGuide": "https://github.com/andreynovikov86-cmd/ReaScripts/blob/main/docs/open-melodyne_RU.md"
+  },
+  {
+    "id": "explode-stereo-audio",
+    "name": "Explode Stereo Audio",
+    "full": "Explode Stereo Audio",
+    "category": "Audio",
+    "version": "1.0.1",
+    "source": "Andrey Novikov_Explode Stereo Audio.lua",
+    "doc": "docs/explode-stereo-audio.md",
+    "ruDoc": "docs/explode-stereo-audio_RU.md",
+    "tag": "Stereo → L / R",
+    "summary": "Split stereo items into independent mono left and right files.",
+    "ru": "Разделение стереоайтемов на отдельные монофайлы L и R.",
+    "features": [
+      "One shared L/R child-track pair for each source track.",
+      "Real mono 32-bit float WAV files.",
+      "Copied Take FX remain bypassed.",
+      "REAPER 7.46+. No extensions required."
+    ],
+    "ruFeatures": [
+      "Одна общая пара дочерних L/R-треков на исходный трек.",
+      "Отдельные моно WAV 32-bit float.",
+      "Скопированные Take FX остаются отключены.",
+      "REAPER 7.46+. Расширения не нужны."
+    ],
+    "kind": "scripts",
+    "cover": "docs/cards/explode-stereo-audio.svg",
+    "download": "https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/main/Andrey%20Novikov_Explode%20Stereo%20Audio.lua",
+    "repository": "https://github.com/andreynovikov86-cmd/ReaScripts",
+    "guide": "https://github.com/andreynovikov86-cmd/ReaScripts/blob/main/docs/explode-stereo-audio.md",
+    "ruGuide": "https://github.com/andreynovikov86-cmd/ReaScripts/blob/main/docs/explode-stereo-audio_RU.md"
+  },
+  {
+    "id": "import-tracks",
+    "name": "Import Tracks From Project",
+    "full": "Import Tracks From Project RPP",
+    "category": "Tracks",
+    "version": "0.2.26",
+    "source": "Andrey Novikov_Import Tracks From Project RPP.lua",
+    "doc": "docs/import-tracks-from-project.md",
+    "ruDoc": "docs/import-tracks-from-project_RU.md",
+    "tag": "Browse · Select · Import",
+    "summary": "Browse another project and import the tracks you need.",
+    "ru": "Просмотр другого проекта и импорт нужных дорожек.",
+    "features": [
+      "Folder tree, search and manual dependency exclusions.",
+      "Track routing, FX, envelopes and items.",
+      "Media copying with progress.",
+      "REAPER 7.85+, ReaImGui 0.10+; js_ReaScriptAPI for dragging."
+    ],
+    "ruFeatures": [
+      "Дерево папок, поиск и исключение зависимостей.",
+      "Маршрутизация, FX, огибающие и айтемы.",
+      "Копирование медиа с прогрессом.",
+      "REAPER 7.85+, ReaImGui 0.10+; js_ReaScriptAPI для перетаскивания."
+    ],
+    "screenshots": [
+      "https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/main/docs/images/import-tracks-en.png",
+      "https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/main/docs/images/import-tracks-ru.png"
+    ],
+    "kind": "scripts",
+    "cover": "docs/cards/import-tracks.svg",
+    "download": "https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/main/Andrey%20Novikov_Import%20Tracks%20From%20Project%20RPP.lua",
+    "repository": "https://github.com/andreynovikov86-cmd/ReaScripts",
+    "guide": "https://github.com/andreynovikov86-cmd/ReaScripts/blob/main/docs/import-tracks-from-project.md",
+    "ruGuide": "https://github.com/andreynovikov86-cmd/ReaScripts/blob/main/docs/import-tracks-from-project_RU.md"
+  },
+  {
+    "id": "articulationbox",
+    "name": "ArticulationBox",
+    "full": "ArticulationBox",
+    "category": "MIDI",
+    "version": "1.0.14",
+    "source": null,
+    "doc": "ArticulationBox/README.md",
+    "ruDoc": "ArticulationBox/README_RU.md",
+    "tag": "Keyswitch · Controller · Ending",
+    "summary": "Manage MIDI articulations, controllers and note endings.",
+    "ru": "Артикуляции MIDI, контроллеры и независимые окончания нот.",
+    "features": [
+      "Separate banks for each track.",
+      "Keyswitch, MIDI channel and controller presets.",
+      "Independent note endings.",
+      "Requires js_ReaScriptAPI and ReaImGui."
+    ],
+    "ruFeatures": [
+      "Отдельные банки для каждого трека.",
+      "Keyswitch, MIDI-каналы и контроллеры.",
+      "Независимые окончания нот Ending.",
+      "Требуются js_ReaScriptAPI и ReaImGui."
+    ],
+    "kind": "scripts",
+    "cover": "docs/cards/articulationbox.svg",
+    "download": "https://github.com/andreynovikov86-cmd/ReaScripts/raw/refs/heads/main/downloads/ArticulationBox.zip",
+    "repository": "https://github.com/andreynovikov86-cmd/ReaScripts",
+    "guide": "https://github.com/andreynovikov86-cmd/ReaScripts/blob/main/ArticulationBox/README.md",
+    "ruGuide": "https://github.com/andreynovikov86-cmd/ReaScripts/blob/main/ArticulationBox/README_RU.md"
+  },
+  {
+    "id": "sidecurve",
+    "kind": "plugins",
+    "name": "SideCurve",
+    "full": "SideCurve",
+    "category": "Dynamics",
+    "version": "0.5.5",
+    "summary": "Draw tempo-synced and audio-triggered volume curves.",
+    "ru": "Рисование кривых громкости по темпу и аудиотриггеру.",
+    "cover": "https://raw.githubusercontent.com/andreynovikov86-cmd/SideCurve/main/docs/SideCurve.png",
+    "repository": "https://github.com/andreynovikov86-cmd/SideCurve",
+    "guide": "https://github.com/andreynovikov86-cmd/SideCurve/blob/main/docs/MANUAL.md",
+    "ruGuide": "https://github.com/andreynovikov86-cmd/SideCurve/blob/main/README.ru.md",
+    "features": [
+      "Tempo-synced and audio-triggered volume shaping.",
+      "Native VST3 for macOS and Windows.",
+      "JSFX edition for REAPER."
+    ],
+    "ruFeatures": [
+      "Формирование громкости по темпу и аудиотриггеру.",
+      "VST3 для macOS и Windows.",
+      "Версия JSFX для REAPER."
+    ],
+    "downloads": [
+      {
+        "label": "macOS · VST3",
+        "url": "https://github.com/andreynovikov86-cmd/SideCurve/releases/download/v0.5.5/SideCurve-0.5.5-macOS-universal.zip"
+      },
+      {
+        "label": "Windows · VST3",
+        "url": "https://github.com/andreynovikov86-cmd/SideCurve/releases/download/v0.5.5/SideCurve-0.5.5-Windows-x64.zip"
+      },
+      {
+        "label": "REAPER · JSFX",
+        "url": "https://github.com/andreynovikov86-cmd/SideCurve/releases/download/v0.5.5/SideCurve-JSFX-0.4.5.zip"
+      }
+    ],
+    "screenshots": [
+      "https://raw.githubusercontent.com/andreynovikov86-cmd/SideCurve/main/docs/SideCurve.png",
+      "https://raw.githubusercontent.com/andreynovikov86-cmd/SideCurve/main/docs/media/SideCurve-Audio-Mix.png"
+    ]
+  }
+]

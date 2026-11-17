@@ -1,5 +1,11 @@
 # Explode Stereo Audio
 
+**By Andrey Novikov** · [Все скрипты](../README_RU.md)
+
+[**↓ Скачать скрипт**](https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/main/Andrey%20Novikov_Explode%20Stereo%20Audio.lua) · [Установить через ReaPack](../README_RU.md#установка-и-обновление-через-reapack)
+
+![Explode Stereo Audio](../docs/cards/explode-stereo-audio.svg)
+
 [English](explode-stereo-audio.md) | [Русский](explode-stereo-audio_RU.md)
 
 Автор: **Andrey Novikov (Андрей Новиков)**. Версия **1.0.1**. REAPER **7.46+**. Расширения не требуются.

@@ -1,5 +1,11 @@
 # ArticulationBox
 
+**By Andrey Novikov** · [All scripts](../README.md)
+
+[**↓ Download package ZIP**](https://github.com/andreynovikov86-cmd/ReaScripts/raw/refs/heads/main/downloads/ArticulationBox.zip) · [Install with ReaPack](../README.md#install--update-via-reapack)
+
+![ArticulationBox](../docs/cards/articulationbox.svg)
+
 By **Andrey Novikov**.
 
 **English** · [Русский](README_RU.md)

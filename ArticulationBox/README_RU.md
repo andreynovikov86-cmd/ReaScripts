@@ -1,5 +1,11 @@
 # ArticulationBox
 
+**By Andrey Novikov** · [Все скрипты](../README_RU.md)
+
+[**↓ Скачать пакет ZIP**](https://github.com/andreynovikov86-cmd/ReaScripts/raw/refs/heads/main/downloads/ArticulationBox.zip) · [Установить через ReaPack](../README_RU.md#установка-и-обновление-через-reapack)
+
+![ArticulationBox](../docs/cards/articulationbox.svg)
+
 Автор: **Andrey Novikov**.
 
 [English](README.md) · **Русский**
@@ -77,4 +83,3 @@ Add / Edit можно оставлять открытым при перемещ�
 3. Назначьте горячие клавиши MIDI Editor новым установленным действиям. При необходимости включите автозапуск в новом экземпляре.
 
 Банки треков и назначения нот остаются в проектах REAPER. Шаблоны банков и настройки используют прежние места хранения. В старом репозитории остаются история версий и автоматически обновляемый индекс совместимости; разработка ведётся здесь.
-

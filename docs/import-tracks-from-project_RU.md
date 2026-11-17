@@ -1,5 +1,11 @@
 # Import Tracks From Project RPP
 
+**By Andrey Novikov** · [Все скрипты](../README_RU.md)
+
+[**↓ Скачать скрипт**](https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/main/Andrey%20Novikov_Import%20Tracks%20From%20Project%20RPP.lua) · [Установить через ReaPack](../README_RU.md#установка-и-обновление-через-reapack)
+
+![Import Tracks From Project](../docs/cards/import-tracks.svg)
+
 [English](import-tracks-from-project.md) | [Русский](import-tracks-from-project_RU.md)
 
 Автор: **Andrey Novikov (Андрей Новиков)**. Версия **0.2.26**. Требуются **REAPER 7.85+** и **ReaImGui 0.10+**. Для перетаскивания в аранжировку дополнительно нужен **js_ReaScriptAPI**.
