@@ -11,12 +11,12 @@ REAPER Lua scripts by **Andrey Novikov**.
    ```text
    https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/main/index.xml
    ```
-2. Open **Extensions → ReaPack → Browse packages**. Search for **Explode Stereo Audio (Andrey Novikov)**, **Open Melodyne (Andrey Novikov)**, **Render Take FX and Bypass Originals FX (Andrey Novikov)** or **Import Tracks From Project RPP (Andrey Novikov)**, mark the desired package for installation, and click **Apply**.
+2. Open **Extensions → ReaPack → Browse packages**. Search for **Explode Stereo Audio (Andrey Novikov)**, **Open Melodyne (Andrey Novikov)**, **Render Take FX and Bypass Originals FX (Andrey Novikov)**, **Import Tracks From Project RPP (Andrey Novikov)** or **ArticulationBox**, mark the desired package for installation, and click **Apply**.
 3. For later releases, use **Extensions → ReaPack → Synchronize packages**.
 
-Current versions: **Explode Stereo Audio 1.0.1**, **Open Melodyne 1.1.0** (one window per selection), **Render Take FX 1.2.1** and **Import Tracks From Project RPP 0.2.26**.
+Current versions: **Explode Stereo Audio 1.0.1**, **Open Melodyne 1.1.0** (one window per selection), **Render Take FX 1.2.1**, **Import Tracks From Project RPP 0.2.26** and **ArticulationBox 1.0.14**.
 
-Scripts installed through ReaPack are registered in the main Action List with **(Andrey Novikov)** in their file names. If migrating from a manually downloaded script, assign the shortcut to the ReaPack action once; subsequent ReaPack updates keep that action and shortcut.
+Standalone single-file scripts installed through ReaPack are registered in the main Action List with **(Andrey Novikov)** in their file names. If migrating from a manually downloaded script, assign the shortcut to the ReaPack action once; subsequent ReaPack updates keep that action and shortcut.
 
 </details>
 
@@ -130,6 +130,16 @@ Verified in REAPER 7.85/macOS-arm64: insertion, folders, automation lanes, copyi
 [Guide and screenshots](docs/import-tracks-from-project.md)
 
 </details>
+
+## 5. ArticulationBox
+
+[Package and installation guide](ArticulationBox/README.md) · [Русский](ArticulationBox/README_RU.md)
+
+A compact articulation field and menus for the MIDI Editor: per-track banks, keyswitches, MIDI channels, independent Controller presets and note endings. Automatic switches follow musical-note edits. Requires **js_ReaScriptAPI** and **ReaImGui**; interface in English.
+
+Install **ArticulationBox** from this repository through ReaPack. Run **Articulation_Manager.lua** in the MIDI Editor and assign a shortcut to **Articulation_Quick_Menu.lua**. The main action is also available in Main for startup. Keep the full ArticulationBox folder together for manual installation.
+
+Version **1.0.14** moves the tested 1.0.13 package here and updates its installation links. Playback behavior, bank storage and MIDI assignments are unchanged. If migrating an existing installation from the separate ArticulationBox repository, follow the [migration steps](ArticulationBox/README.md#moving-from-the-former-articulationbox-repository) before switching actions.
 
 <details>
 <summary>Publishing future updates (maintainers)</summary>

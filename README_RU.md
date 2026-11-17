@@ -11,12 +11,12 @@ Lua-скрипты для REAPER. Автор: **Andrey Novikov (Андрей Н�
    ```text
    https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/main/index.xml
    ```
-2. Откройте **Extensions → ReaPack → Browse packages**. Найдите **Explode Stereo Audio (Andrey Novikov)**, **Open Melodyne (Andrey Novikov)**, **Render Take FX and Bypass Originals FX (Andrey Novikov)** или **Import Tracks From Project RPP (Andrey Novikov)**, отметьте нужный пакет для установки и нажмите **Apply**.
+2. Откройте **Extensions → ReaPack → Browse packages**. Найдите **Explode Stereo Audio (Andrey Novikov)**, **Open Melodyne (Andrey Novikov)**, **Render Take FX and Bypass Originals FX (Andrey Novikov)**, **Import Tracks From Project RPP (Andrey Novikov)** или **ArticulationBox**, отметьте нужный пакет для установки и нажмите **Apply**.
 3. В дальнейшем обновляйте через **Extensions → ReaPack → Synchronize packages**.
 
-Текущие версии: **Explode Stereo Audio 1.0.1**, **Open Melodyne 1.1.0** (одно окно на всё выделение), **Render Take FX 1.2.1** и **Import Tracks From Project RPP 0.2.26**.
+Текущие версии: **Explode Stereo Audio 1.0.1**, **Open Melodyne 1.1.0** (одно окно на всё выделение), **Render Take FX 1.2.1**, **Import Tracks From Project RPP 0.2.26** и **ArticulationBox 1.0.14**.
 
-Установленные через ReaPack скрипты появляются в основном списке Actions с **(Andrey Novikov)** в имени файла. При переходе с вручную скачанного скрипта один раз назначьте горячую клавишу действию из ReaPack. Последующие обновления сохраняют это действие и клавишу.
+Отдельные однофайловые скрипты, установленные через ReaPack, появляются в основном списке Actions с **(Andrey Novikov)** в имени файла. При переходе с вручную скачанного скрипта один раз назначьте горячую клавишу действию из ReaPack. Последующие обновления сохраняют это действие и клавишу.
 
 </details>
 
@@ -122,6 +122,16 @@ REAPER 7.46+, расширения не нужны. Результат — мо�
 [Руководство и скриншоты](docs/import-tracks-from-project_RU.md)
 
 </details>
+
+## 5. ArticulationBox
+
+[Пакет и установка](ArticulationBox/README_RU.md) · [English](ArticulationBox/README.md)
+
+Компактное поле и меню артикуляций в MIDI Editor: отдельные банки треков, keyswitch, MIDI-каналы, независимые Controller и окончания нот Ending. Автоматические переключатели следуют за изменениями музыкальных нот. Требуются **js_ReaScriptAPI** и **ReaImGui**; интерфейс на английском.
+
+Установите **ArticulationBox** из этого репозитория через ReaPack. Запустите **Articulation_Manager.lua** в MIDI Editor и назначьте клавишу **Articulation_Quick_Menu.lua**. Основное действие также доступно в Main для автозапуска. При ручной установке сохраняйте всю папку ArticulationBox вместе.
+
+Версия **1.0.14** переносит сюда проверенный пакет 1.0.13 и обновляет ссылки установки. Воспроизведение, хранение банков и назначения MIDI сохранены. При переходе из отдельного репозитория ArticulationBox сначала выполните [инструкцию перехода](ArticulationBox/README_RU.md#переход-из-прежнего-репозитория-articulationbox).
 
 <details>
 <summary>Публикация следующих обновлений (для автора)</summary>
