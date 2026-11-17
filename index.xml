@@ -69,4 +69,164 @@
       </version>
     </reapack>
   </category>
+  <category name="ArticulationBox">
+    <reapack name="Articulation_Manager.lua" type="script" desc="ArticulationBox">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Compact articulation field for REAPER MIDI Editor. Requires js_ReaScriptAPI and ReaImGui, installed separately through ReaPack. Supports per-track banks, keyswitches, MIDI channels and controllers. Personal banks are stored outside this package and are not distributed. Licensed under MIT; see LICENSE.md and THIRD_PARTY_NOTICES.txt.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0.1" author="ArticulationBox" time="2026-10-16T10:37:09Z">
+        <changelog><![CDATA[Manual keyswitch notes coexist with automatic assignments.
+Later manual or automatic switches trim earlier switches on the same channel.]]></changelog>
+        <source main="main midi_editor">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/0158f90aa52194a31fa0888da843b84adf56d251/ArticulationBox/Articulation_Manager.lua</source>
+        <source main="midi_editor" file="Articulation_Quick_Menu.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/0158f90aa52194a31fa0888da843b84adf56d251/ArticulationBox/Articulation_Quick_Menu.lua</source>
+        <source main="midi_editor" file="Articulation_Menu_Popup.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/0158f90aa52194a31fa0888da843b84adf56d251/ArticulationBox/Articulation_Menu_Popup.lua</source>
+        <source file="THIRD_PARTY_NOTICES.txt">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/0158f90aa52194a31fa0888da843b84adf56d251/ArticulationBox/THIRD_PARTY_NOTICES.txt</source>
+        <source file="INSTALL_RU.txt">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/0158f90aa52194a31fa0888da843b84adf56d251/ArticulationBox/INSTALL_RU.txt</source>
+      </version>
+      <version name="1.0.2" author="ArticulationBox" time="2026-10-16T16:42:37Z">
+        <changelog><![CDATA[Add offline Help topics to the full menu.
+Include detailed English and Russian user guides.]]></changelog>
+        <source main="main midi_editor">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/6ebd2b2e7356cf67e62c754eb58c77db4ffb7092/ArticulationBox/Articulation_Manager.lua</source>
+        <source main="midi_editor" file="Articulation_Quick_Menu.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/6ebd2b2e7356cf67e62c754eb58c77db4ffb7092/ArticulationBox/Articulation_Quick_Menu.lua</source>
+        <source main="midi_editor" file="Articulation_Menu_Popup.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/6ebd2b2e7356cf67e62c754eb58c77db4ffb7092/ArticulationBox/Articulation_Menu_Popup.lua</source>
+        <source file="THIRD_PARTY_NOTICES.txt">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/6ebd2b2e7356cf67e62c754eb58c77db4ffb7092/ArticulationBox/THIRD_PARTY_NOTICES.txt</source>
+        <source file="INSTALL_RU.txt">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/6ebd2b2e7356cf67e62c754eb58c77db4ffb7092/ArticulationBox/INSTALL_RU.txt</source>
+        <source file="USER_GUIDE.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/6ebd2b2e7356cf67e62c754eb58c77db4ffb7092/ArticulationBox/USER_GUIDE.md</source>
+        <source file="USER_GUIDE_RU.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/6ebd2b2e7356cf67e62c754eb58c77db4ffb7092/ArticulationBox/USER_GUIDE_RU.md</source>
+      </version>
+      <version name="1.0.3" author="Andrey Novikov" time="2026-10-16T18:03:41Z">
+        <changelog><![CDATA[Include the MIT license in the package and retain third-party notices.]]></changelog>
+        <source main="main midi_editor">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/a79e4d4a0348afa620c92332131ed4edad977ea9/ArticulationBox/Articulation_Manager.lua</source>
+        <source main="midi_editor" file="Articulation_Quick_Menu.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/a79e4d4a0348afa620c92332131ed4edad977ea9/ArticulationBox/Articulation_Quick_Menu.lua</source>
+        <source main="midi_editor" file="Articulation_Menu_Popup.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/a79e4d4a0348afa620c92332131ed4edad977ea9/ArticulationBox/Articulation_Menu_Popup.lua</source>
+        <source file="THIRD_PARTY_NOTICES.txt">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/a79e4d4a0348afa620c92332131ed4edad977ea9/ArticulationBox/THIRD_PARTY_NOTICES.txt</source>
+        <source file="INSTALL_RU.txt">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/a79e4d4a0348afa620c92332131ed4edad977ea9/ArticulationBox/INSTALL_RU.txt</source>
+        <source file="USER_GUIDE.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/a79e4d4a0348afa620c92332131ed4edad977ea9/ArticulationBox/USER_GUIDE.md</source>
+        <source file="USER_GUIDE_RU.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/a79e4d4a0348afa620c92332131ed4edad977ea9/ArticulationBox/USER_GUIDE_RU.md</source>
+        <source file="LICENSE.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/a79e4d4a0348afa620c92332131ed4edad977ea9/ArticulationBox/LICENSE.md</source>
+      </version>
+      <version name="1.0.6" author="Andrey Novikov" time="2026-10-22T11:14:37Z">
+        <changelog><![CDATA[Keep Save open; support Add New, Add variant and next-entry editing.
+Learn existing mapping names/settings and refresh row names on every save.
+Stabilize custom window dragging and use one Delay timing label.
+Preserve overrides while adding chord notes and repair close switch timing.]]></changelog>
+        <source main="main midi_editor">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/bef689ba82f6d62dcf8515d5736679413b3772a8/ArticulationBox/Articulation_Manager.lua</source>
+        <source main="midi_editor" file="Articulation_Quick_Menu.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/bef689ba82f6d62dcf8515d5736679413b3772a8/ArticulationBox/Articulation_Quick_Menu.lua</source>
+        <source main="midi_editor" file="Articulation_Menu_Popup.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/bef689ba82f6d62dcf8515d5736679413b3772a8/ArticulationBox/Articulation_Menu_Popup.lua</source>
+        <source file="Articulation_Editor.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/bef689ba82f6d62dcf8515d5736679413b3772a8/ArticulationBox/Articulation_Editor.lua</source>
+        <source file="THIRD_PARTY_NOTICES.txt">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/bef689ba82f6d62dcf8515d5736679413b3772a8/ArticulationBox/THIRD_PARTY_NOTICES.txt</source>
+        <source file="INSTALL_RU.txt">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/bef689ba82f6d62dcf8515d5736679413b3772a8/ArticulationBox/INSTALL_RU.txt</source>
+        <source file="USER_GUIDE.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/bef689ba82f6d62dcf8515d5736679413b3772a8/ArticulationBox/USER_GUIDE.md</source>
+        <source file="USER_GUIDE_RU.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/bef689ba82f6d62dcf8515d5736679413b3772a8/ArticulationBox/USER_GUIDE_RU.md</source>
+        <source file="LICENSE.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/bef689ba82f6d62dcf8515d5736679413b3772a8/ArticulationBox/LICENSE.md</source>
+      </version>
+      <version name="1.0.7" author="Andrey Novikov" time="2026-10-29T03:47:14Z">
+        <changelog><![CDATA[Keep background keyswitch updates in the original MIDI Undo/Redo step.
+Preserve articulation assignments when notes move or stagger.
+Save & Next always selects Add New; an unmapped learned key starts a new entry.]]></changelog>
+        <source main="main midi_editor">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/c9f3822c73ceef42c70a5b556731a5fc9ed57a44/ArticulationBox/Articulation_Manager.lua</source>
+        <source main="midi_editor" file="Articulation_Quick_Menu.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/c9f3822c73ceef42c70a5b556731a5fc9ed57a44/ArticulationBox/Articulation_Quick_Menu.lua</source>
+        <source main="midi_editor" file="Articulation_Menu_Popup.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/c9f3822c73ceef42c70a5b556731a5fc9ed57a44/ArticulationBox/Articulation_Menu_Popup.lua</source>
+        <source file="Articulation_Editor.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/c9f3822c73ceef42c70a5b556731a5fc9ed57a44/ArticulationBox/Articulation_Editor.lua</source>
+        <source file="THIRD_PARTY_NOTICES.txt">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/c9f3822c73ceef42c70a5b556731a5fc9ed57a44/ArticulationBox/THIRD_PARTY_NOTICES.txt</source>
+        <source file="INSTALL_RU.txt">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/c9f3822c73ceef42c70a5b556731a5fc9ed57a44/ArticulationBox/INSTALL_RU.txt</source>
+        <source file="USER_GUIDE.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/c9f3822c73ceef42c70a5b556731a5fc9ed57a44/ArticulationBox/USER_GUIDE.md</source>
+        <source file="USER_GUIDE_RU.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/c9f3822c73ceef42c70a5b556731a5fc9ed57a44/ArticulationBox/USER_GUIDE_RU.md</source>
+        <source file="LICENSE.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/c9f3822c73ceef42c70a5b556731a5fc9ed57a44/ArticulationBox/LICENSE.md</source>
+      </version>
+      <version name="1.0.8" author="Andrey Novikov" time="2026-10-29T09:11:11Z">
+        <changelog><![CDATA[Add independent Controller presets and optional linked articulation controllers.
+Support Pitch Bend and CC with full-note, note-start and note-end timing.
+Keep controller movement, boundary room and item tails in MIDI Undo/Redo.
+Add Reset controllers to ready menus without changing articulations.
+Fix the Controller type button color stack and Add New selection.]]></changelog>
+        <source main="main midi_editor">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/86224a751f00b9fd153f694de937aa592868edba/ArticulationBox/Articulation_Manager.lua</source>
+        <source main="midi_editor" file="Articulation_Quick_Menu.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/86224a751f00b9fd153f694de937aa592868edba/ArticulationBox/Articulation_Quick_Menu.lua</source>
+        <source main="midi_editor" file="Articulation_Menu_Popup.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/86224a751f00b9fd153f694de937aa592868edba/ArticulationBox/Articulation_Menu_Popup.lua</source>
+        <source file="Articulation_Editor.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/86224a751f00b9fd153f694de937aa592868edba/ArticulationBox/Articulation_Editor.lua</source>
+        <source file="THIRD_PARTY_NOTICES.txt">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/86224a751f00b9fd153f694de937aa592868edba/ArticulationBox/THIRD_PARTY_NOTICES.txt</source>
+        <source file="INSTALL_RU.txt">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/86224a751f00b9fd153f694de937aa592868edba/ArticulationBox/INSTALL_RU.txt</source>
+        <source file="USER_GUIDE.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/86224a751f00b9fd153f694de937aa592868edba/ArticulationBox/USER_GUIDE.md</source>
+        <source file="USER_GUIDE_RU.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/86224a751f00b9fd153f694de937aa592868edba/ArticulationBox/USER_GUIDE_RU.md</source>
+        <source file="LICENSE.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/86224a751f00b9fd153f694de937aa592868edba/ArticulationBox/LICENSE.md</source>
+      </version>
+      <version name="1.0.9" author="Andrey Novikov" time="2026-10-29T12:26:44Z">
+        <changelog><![CDATA[Skip repeated note decoding when MIDI and project state are unchanged.
+Avoid project-wide transpose scans and Undo journal work during idle playback.
+Preserve selection, drag-release and bank/settings refresh behavior.]]></changelog>
+        <source main="main midi_editor">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/0f1ce80d6dcb46a73a8080b4c6a63b919b249bfd/ArticulationBox/Articulation_Manager.lua</source>
+        <source main="midi_editor" file="Articulation_Quick_Menu.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/0f1ce80d6dcb46a73a8080b4c6a63b919b249bfd/ArticulationBox/Articulation_Quick_Menu.lua</source>
+        <source main="midi_editor" file="Articulation_Menu_Popup.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/0f1ce80d6dcb46a73a8080b4c6a63b919b249bfd/ArticulationBox/Articulation_Menu_Popup.lua</source>
+        <source file="Articulation_Editor.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/0f1ce80d6dcb46a73a8080b4c6a63b919b249bfd/ArticulationBox/Articulation_Editor.lua</source>
+        <source file="THIRD_PARTY_NOTICES.txt">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/0f1ce80d6dcb46a73a8080b4c6a63b919b249bfd/ArticulationBox/THIRD_PARTY_NOTICES.txt</source>
+        <source file="INSTALL_RU.txt">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/0f1ce80d6dcb46a73a8080b4c6a63b919b249bfd/ArticulationBox/INSTALL_RU.txt</source>
+        <source file="USER_GUIDE.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/0f1ce80d6dcb46a73a8080b4c6a63b919b249bfd/ArticulationBox/USER_GUIDE.md</source>
+        <source file="USER_GUIDE_RU.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/0f1ce80d6dcb46a73a8080b4c6a63b919b249bfd/ArticulationBox/USER_GUIDE_RU.md</source>
+        <source file="LICENSE.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/0f1ce80d6dcb46a73a8080b4c6a63b919b249bfd/ArticulationBox/LICENSE.md</source>
+      </version>
+      <version name="1.0.10" author="Andrey Novikov" time="2026-10-30T14:39:55Z">
+        <changelog><![CDATA[Keep note links active while Add / Edit articulation is open.
+Pause automatic writes during native Quantize Events preview.
+Use one MIDI buffer write and indexed matching for long items.
+Handle selection changes without regenerating keyswitches.
+Skip MIDI scans on unrelated project changes during playback.
+Display literal ampersands in articulation menus.
+Add explicit Ending type; only ending records appear in its submenu.
+Add independent Ending keyswitches with Note end timing and Clear ending.
+Create and select a named bank before editing articulations from Empty bank.
+Widen bank name fields for creation and renaming.
+Clear the Name input buffer after Save & Next and when learning an unmapped key.
+Exclude standalone Controller presets from keyswitch name learning.
+Keep the source name when creating an articulation variant.
+Add independent group names to keyswitch velocity submenus.
+Move Default articulation below Banks; disable it for Empty bank.
+Restore defaults after manual keyswitch regions and show named velocity groups.
+Start Controller with None; do not add Pitch Bend when changing types.]]></changelog>
+        <source main="main midi_editor">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/368751a751a66cb12fd4ca48cef76e8dad0f7705/ArticulationBox/Articulation_Manager.lua</source>
+        <source main="midi_editor" file="Articulation_Quick_Menu.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/368751a751a66cb12fd4ca48cef76e8dad0f7705/ArticulationBox/Articulation_Quick_Menu.lua</source>
+        <source main="midi_editor" file="Articulation_Menu_Popup.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/368751a751a66cb12fd4ca48cef76e8dad0f7705/ArticulationBox/Articulation_Menu_Popup.lua</source>
+        <source file="Articulation_Editor.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/368751a751a66cb12fd4ca48cef76e8dad0f7705/ArticulationBox/Articulation_Editor.lua</source>
+        <source file="THIRD_PARTY_NOTICES.txt">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/368751a751a66cb12fd4ca48cef76e8dad0f7705/ArticulationBox/THIRD_PARTY_NOTICES.txt</source>
+        <source file="INSTALL_RU.txt">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/368751a751a66cb12fd4ca48cef76e8dad0f7705/ArticulationBox/INSTALL_RU.txt</source>
+        <source file="USER_GUIDE.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/368751a751a66cb12fd4ca48cef76e8dad0f7705/ArticulationBox/USER_GUIDE.md</source>
+        <source file="USER_GUIDE_RU.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/368751a751a66cb12fd4ca48cef76e8dad0f7705/ArticulationBox/USER_GUIDE_RU.md</source>
+        <source file="LICENSE.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/368751a751a66cb12fd4ca48cef76e8dad0f7705/ArticulationBox/LICENSE.md</source>
+      </version>
+      <version name="1.0.13" author="Andrey Novikov" time="2026-11-17T05:54:41Z">
+        <changelog><![CDATA[Preserve overlapping same-pitch MIDI voices when replacing articulations.
+Keep raw MIDI snapshots intact on rollback; avoid redundant native sorting.
+Clear automatic assignments in newly copied or pasted items on tracks with Empty bank.
+Retain articulation assignments when copying within a configured track.
+Detect newly appeared take identities, prune removed identities for Redo and skip unchanged items.
+Protect linked pooled MIDI sources from clearing the original item.]]></changelog>
+        <source main="main midi_editor">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/37365e00cb08ee28ea502b7367b137d8ca3c6cf5/ArticulationBox/Articulation_Manager.lua</source>
+        <source main="midi_editor" file="Articulation_Quick_Menu.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/37365e00cb08ee28ea502b7367b137d8ca3c6cf5/ArticulationBox/Articulation_Quick_Menu.lua</source>
+        <source main="midi_editor" file="Articulation_Menu_Popup.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/37365e00cb08ee28ea502b7367b137d8ca3c6cf5/ArticulationBox/Articulation_Menu_Popup.lua</source>
+        <source file="Articulation_Editor.lua">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/37365e00cb08ee28ea502b7367b137d8ca3c6cf5/ArticulationBox/Articulation_Editor.lua</source>
+        <source file="THIRD_PARTY_NOTICES.txt">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/37365e00cb08ee28ea502b7367b137d8ca3c6cf5/ArticulationBox/THIRD_PARTY_NOTICES.txt</source>
+        <source file="INSTALL_RU.txt">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/37365e00cb08ee28ea502b7367b137d8ca3c6cf5/ArticulationBox/INSTALL_RU.txt</source>
+        <source file="USER_GUIDE.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/37365e00cb08ee28ea502b7367b137d8ca3c6cf5/ArticulationBox/USER_GUIDE.md</source>
+        <source file="USER_GUIDE_RU.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/37365e00cb08ee28ea502b7367b137d8ca3c6cf5/ArticulationBox/USER_GUIDE_RU.md</source>
+        <source file="LICENSE.md">https://github.com/andreynovikov86-cmd/ArticulationBox/raw/37365e00cb08ee28ea502b7367b137d8ca3c6cf5/ArticulationBox/LICENSE.md</source>
+      </version>
+      <version name="1.0.14" author="Andrey Novikov" time="2026-11-17T08:52:17Z">
+        <changelog>Move ArticulationBox to the shared ReaScripts repository and update installation links. Preserve banks, MIDI format and playback behavior from 1.0.13.</changelog>
+        <source main="main midi_editor">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/543f02e2a06be193d7e551e286b4fb11c5640494/ArticulationBox/Articulation_Manager.lua</source>
+        <source main="midi_editor" file="Articulation_Quick_Menu.lua">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/543f02e2a06be193d7e551e286b4fb11c5640494/ArticulationBox/Articulation_Quick_Menu.lua</source>
+        <source main="midi_editor" file="Articulation_Menu_Popup.lua">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/543f02e2a06be193d7e551e286b4fb11c5640494/ArticulationBox/Articulation_Menu_Popup.lua</source>
+        <source file="Articulation_Editor.lua">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/543f02e2a06be193d7e551e286b4fb11c5640494/ArticulationBox/Articulation_Editor.lua</source>
+        <source file="THIRD_PARTY_NOTICES.txt">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/543f02e2a06be193d7e551e286b4fb11c5640494/ArticulationBox/THIRD_PARTY_NOTICES.txt</source>
+        <source file="INSTALL_RU.txt">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/543f02e2a06be193d7e551e286b4fb11c5640494/ArticulationBox/INSTALL_RU.txt</source>
+        <source file="USER_GUIDE.md">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/543f02e2a06be193d7e551e286b4fb11c5640494/ArticulationBox/USER_GUIDE.md</source>
+        <source file="USER_GUIDE_RU.md">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/543f02e2a06be193d7e551e286b4fb11c5640494/ArticulationBox/USER_GUIDE_RU.md</source>
+        <source file="LICENSE.md">https://raw.githubusercontent.com/andreynovikov86-cmd/ReaScripts/543f02e2a06be193d7e551e286b4fb11c5640494/ArticulationBox/LICENSE.md</source>
+      </version>
+    </reapack>
+  </category>
 </index>
