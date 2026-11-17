@@ -34,11 +34,13 @@ For a full installation guide in Russian, see [INSTALL_RU](INSTALL_RU.txt). Thir
 
 ## Moving from the former ArticulationBox repository
 
+Existing installations can continue updating through ordinary synchronization: the former compatibility index mirrors new ArticulationBox releases from ReaScripts. Reinstallation is not required for updates. The steps below are only for moving the installation into the shared repository.
+
 1. Stop the old ArticulationBox instance and turn off its **Settings > Run script on startup** option if enabled.
 2. In ReaPack, uninstall ArticulationBox from the former **Andrey Novikov** repository, then install **ArticulationBox** from **ReaScripts by Andrey Novikov** using the URL above.
 3. Assign your MIDI Editor shortcuts to the newly installed actions. Enable startup again from the new instance if needed.
 
-Track banks and note assignments remain in your REAPER projects. Saved bank templates and preferences use the same locations as before. The old repository retains its version history and compatibility index; future updates are published here.
+Track banks and note assignments remain in your REAPER projects. Saved bank templates and preferences use the same locations as before. The former repository retains its release history and an automatically updated compatibility index; development takes place here.
 
 ## Articulation editor
 

@@ -139,7 +139,7 @@ A compact articulation field and menus for the MIDI Editor: per-track banks, key
 
 Install **ArticulationBox** from this repository through ReaPack. Run **Articulation_Manager.lua** in the MIDI Editor and assign a shortcut to **Articulation_Quick_Menu.lua**. The main action is also available in Main for startup. Keep the full ArticulationBox folder together for manual installation.
 
-Version **1.0.14** moves the tested 1.0.13 package here and updates its installation links. Playback behavior, bank storage and MIDI assignments are unchanged. If migrating an existing installation from the separate ArticulationBox repository, follow the [migration steps](ArticulationBox/README.md#moving-from-the-former-articulationbox-repository) before switching actions.
+Version **1.0.14** moves the tested 1.0.13 package here and updates its installation links. Playback behavior, bank storage and MIDI assignments are unchanged. Existing installations can keep updating through the former compatibility index without reinstallation. To consolidate the installation into the shared repository, follow the [migration steps](ArticulationBox/README.md#moving-from-the-former-articulationbox-repository) before switching actions.
 
 <details>
 <summary>Publishing future updates (maintainers)</summary>
